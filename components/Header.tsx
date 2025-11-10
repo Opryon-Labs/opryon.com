@@ -1,6 +1,7 @@
 'use client';
 
 import { motion, useScroll, useTransform } from 'framer-motion';
+import Image from 'next/image';
 
 export default function Header() {
   const { scrollY } = useScroll();
@@ -33,27 +34,27 @@ export default function Header() {
       <div className="max-w-screen-2xl mx-auto px-8 md:px-12 py-6 flex items-center justify-between">
         {/* Logo - Left */}
         <motion.div
-          className="cursor-pointer group"
+          className="cursor-pointer group relative"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 3.2 }}
           whileHover={{ scale: 1.02 }}
         >
-          <div className="text-foreground relative text-center">
-            <div className="text-2xl md:text-3xl font-bold tracking-[0.15em] leading-none">
-              OPRYON
-            </div>
-            <div className="text-xs md:text-sm font-light tracking-[0.3em] text-neutral mt-1 transition-colors group-hover:text-primary">
-              LABS
-            </div>
-            {/* Subtle underline accent */}
-            <motion.div
-              className="absolute -bottom-1 left-1/2 -translate-x-1/2 h-px bg-gradient-to-r from-transparent via-primary to-transparent"
-              initial={{ width: 0 }}
-              whileHover={{ width: '100%' }}
-              transition={{ duration: 0.3 }}
-            />
-          </div>
+          <Image
+            src="/logo.svg"
+            alt="Opryon Labs"
+            width={160}
+            height={30}
+            className="h-6 md:h-7 lg:h-8 w-auto transition-all group-hover:brightness-110"
+            priority
+          />
+          {/* Subtle underline accent */}
+          <motion.div
+            className="absolute -bottom-1 left-1/2 -translate-x-1/2 h-px bg-gradient-to-r from-transparent via-primary to-transparent"
+            initial={{ width: 0 }}
+            whileHover={{ width: '100%' }}
+            transition={{ duration: 0.3 }}
+          />
         </motion.div>
 
         {/* Hamburger menu - Right */}

@@ -1,6 +1,7 @@
 'use client';
 
 import { Container } from '@/components/ui';
+import Image from 'next/image';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -10,16 +11,15 @@ export default function Footer() {
       <Container>
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
           {/* Left - Logo & Copyright */}
-          <div>
-            <div className="text-foreground text-center mb-2">
-              <div className="text-xl font-bold tracking-[0.15em] leading-none">
-                OPRYON
-              </div>
-              <div className="text-xs font-light tracking-[0.3em] text-neutral mt-0.5">
-                LABS
-              </div>
-            </div>
-            <p className="text-neutral/60 text-xs text-center">
+          <div className="flex flex-col items-start gap-2">
+            <Image
+              src="/logo.svg"
+              alt="Opryon Labs"
+              width={140}
+              height={26}
+              className="h-5 md:h-6 w-auto"
+            />
+            <p className="text-neutral/60 text-xs">
               © {currentYear} Opryon Labs
             </p>
           </div>
