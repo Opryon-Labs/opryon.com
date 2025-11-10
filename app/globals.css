@@ -1,0 +1,97 @@
+@import 'tailwindcss';
+
+:root {
+  /* Dark & Bold Color Scheme */
+  --background: #0a0a0a; /* Almost black */
+  --foreground: #ffffff; /* Pure white */
+
+  /* Opryon Brand Colors - Electric & Modern */
+  --primary: #00f0ff; /* Electric cyan - main brand color */
+  --primary-dark: #00c8d4; /* Darker cyan for hovers */
+  --accent: #00ff88; /* Lime green accent */
+  --neutral: #a0a0a0; /* Mid gray for secondary text */
+  --neutral-dark: #606060; /* Darker gray for subtle elements */
+
+  /* Background variations */
+  --bg-elevated: #141414; /* Slightly lighter than background */
+  --bg-card: #1a1a1a; /* Card backgrounds */
+}
+
+@theme inline {
+  /* Colors */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-accent: var(--accent);
+  --color-neutral: var(--neutral);
+  --color-neutral-dark: var(--neutral-dark);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-bg-card: var(--bg-card);
+
+  /* Fonts */
+  --font-sans: var(--font-space-grotesk);
+  --font-mono: var(--font-geist-mono);
+
+  /* Custom animations */
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  /* Spacing for sections */
+  --section-padding: 5rem;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-space-grotesk), system-ui, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom animations */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}

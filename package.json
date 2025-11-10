@@ -1,0 +1,43 @@
+{
+  "name": "opryon.com",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Official website of Opryon Labs — building next-generation tools and SaaS products for modern businesses.",
+  "author": "Opryon Labs <info@opryon.com> <asmittyagi.dev@gmail.com>",
+  "homepage": "https://opryon.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Opryon-Labs/opryon.com.git"
+  },
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build --turbopack",
+    "start": "next start",
+    "lint": "eslint",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "@react-three/drei": "^10.7.6",
+    "@react-three/fiber": "^9.4.0",
+    "framer-motion": "^12.23.24",
+    "next": "15.5.6",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "three": "^0.181.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.6",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.6.2",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
