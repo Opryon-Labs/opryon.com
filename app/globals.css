@@ -9,8 +9,8 @@
   --primary: #00f0ff; /* Electric cyan - main brand color */
   --primary-dark: #00c8d4; /* Darker cyan for hovers */
   --accent: #00ff88; /* Lime green accent */
-  --neutral: #a0a0a0; /* Mid gray for secondary text */
-  --neutral-dark: #606060; /* Darker gray for subtle elements */
+  --neutral: #b8b8b8; /* Mid gray for secondary text - WCAG AA compliant */
+  --neutral-dark: #8a8a8a; /* Darker gray for subtle elements - improved contrast */
 
   /* Background variations */
   --bg-elevated: #141414; /* Slightly lighter than background */

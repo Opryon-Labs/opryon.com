@@ -64,6 +64,7 @@ export default function Header() {
           transition={{ duration: 0.8, delay: 3.2 }}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
+          aria-label="Open navigation menu"
         >
           <span className="w-8 h-0.5 bg-foreground transition-all group-hover:bg-primary" />
           <span className="w-8 h-0.5 bg-foreground transition-all group-hover:bg-primary" />
