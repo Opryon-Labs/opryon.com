@@ -124,9 +124,9 @@ export default function Header() {
           <motion.div
             className="fixed inset-0 z-90 flex items-center justify-center"
             style={{
-              backgroundColor: '#0a0a0a',
-              backdropFilter: 'blur(10px)',
-              WebkitBackdropFilter: 'blur(10px)'
+              background: 'radial-gradient(circle at center, rgba(10, 10, 10, 0.75) 0%, rgba(10, 10, 10, 0.95) 50%, rgba(10, 10, 10, 1) 100%)',
+              backdropFilter: 'blur(20px)',
+              WebkitBackdropFilter: 'blur(20px)'
             }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
