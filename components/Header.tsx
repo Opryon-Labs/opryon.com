@@ -133,22 +133,27 @@ export default function Header() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
           >
-            <nav className="flex flex-col items-center gap-6 md:gap-8 w-full px-8 md:px-16 lg:px-24">
-              {navigationLinks.map((link, index) => (
-                <motion.button
-                  key={link.id}
-                  onClick={() => scrollToSection(link.id)}
-                  className="text-xl md:text-3xl lg:text-4xl font-light hover:font-semibold relative group w-full text-center py-4 transition-all duration-300 cursor-pointer"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.3, delay: index * 0.05 }}
-                >
-                  {link.name}
-                  {/* Full-width yellow underline - left to right on hover with margins */}
-                  <span className="absolute bottom-0 left-0 w-0 h-px bg-yellow-400 group-hover:w-full transition-all duration-500 ease-out" />
-                </motion.button>
-              ))}
+            <nav className="flex flex-col gap-6 md:gap-8 w-full px-8 md:px-16 lg:px-24 mt-24">
+              {navigationLinks.map((link, index) => {
+                const isEven = index % 2 === 1; // Even position items go right
+                return (
+                  <motion.button
+                    key={link.id}
+                    onClick={() => scrollToSection(link.id)}
+                    className={`text-xl md:text-3xl lg:text-4xl font-light hover:font-semibold relative group w-full py-4 transition-all duration-300 cursor-pointer ${
+                      isEven ? 'text-right' : 'text-left'
+                    }`}
+                    initial={{ opacity: 0, x: isEven ? 50 : -50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: isEven ? 50 : -50 }}
+                    transition={{ duration: 0.4, delay: index * 0.05 }}
+                  >
+                    {link.name}
+                    {/* Full-width yellow underline - left to right on hover */}
+                    <span className="absolute bottom-0 left-0 w-0 h-px bg-yellow-400 group-hover:w-full transition-all duration-500 ease-out" />
+                  </motion.button>
+                );
+              })}
             </nav>
           </motion.div>
         )}
