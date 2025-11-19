@@ -34,7 +34,7 @@ function GlassSphere() {
           attenuationDistance={2}
           attenuationColor="#00d4ff"
           color="#00e0ff"
-          opacity={0.6}
+          opacity={0.2}
         />
       </mesh>
     </Float>
@@ -62,6 +62,8 @@ function MetallicTorus() {
           envMapIntensity={1}
           emissive="#00a8cc"
           emissiveIntensity={0.2}
+          transparent
+          opacity={0.3}
         />
       </mesh>
     </Float>
@@ -95,7 +97,7 @@ function FrostedCapsule() {
           attenuationDistance={1.5}
           attenuationColor="#00ff88"
           color="#00ffaa"
-          opacity={0.5}
+          opacity={0.2}
         />
       </mesh>
     </Float>
@@ -124,7 +126,7 @@ function CrystalOctahedron() {
           emissive="#00ccaa"
           emissiveIntensity={0.3}
           transparent
-          opacity={0.7}
+          opacity={0.3}
         />
       </mesh>
     </Float>
@@ -158,7 +160,7 @@ function FloatingParticles() {
           count={particleCount}
         />
       </bufferGeometry>
-      <pointsMaterial size={0.02} color="#00f0ff" transparent opacity={0.4} sizeAttenuation />
+      <pointsMaterial size={0.02} color="#00f0ff" transparent opacity={0.15} sizeAttenuation />
     </points>
   );
 }

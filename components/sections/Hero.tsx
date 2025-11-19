@@ -129,22 +129,30 @@ export default function Hero() {
             className="overflow-hidden"
           >
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-light leading-tight tracking-tight">
-              {/* "We create" - word by word animation */}
-              <div className="flex justify-center gap-4 mb-2">
-                {['We', 'create'].map((word, i) => (
-                  <motion.span key={i} variants={wordVariants} className="inline-block">
+              {/* "We Create" - word by word animation */}
+              <div className="flex justify-center gap-4 mb-2 text-3xl md:text-4xl lg:text-5xl">
+                {['We', 'Create'].map((word, i) => (
+                  <motion.span
+                    key={i}
+                    variants={wordVariants}
+                    className="inline-block"
+                    style={{
+                      fontFamily: 'Space Grotesk',
+                      letterSpacing: '0.1em',
+                    }}
+                  >
                     {word}
                   </motion.span>
                 ))}
               </div>
 
-              {/* "digital magic" - special gradient animation */}
+              {/* "MAGIC" - Ethnocentric font with gradient */}
               <motion.span
                 variants={magicVariants}
-                className="block italic font-light relative"
+                className="block font-bold relative"
                 style={{
-                  fontFamily: 'Georgia, serif',
-                  letterSpacing: '-0.02em',
+                  fontFamily: 'Ethnocentric, sans-serif',
+                  letterSpacing: '0.1em',
                 }}
               >
                 <span
@@ -156,7 +164,7 @@ export default function Hero() {
                     WebkitTextFillColor: 'transparent',
                   }}
                 >
-                  digital magic
+                  MAGIC
                   {/* Animated glow effect */}
                   <motion.span
                     className="absolute inset-0 blur-xl opacity-50"
@@ -182,10 +190,13 @@ export default function Hero() {
 
           {/* Subtle tagline */}
           <motion.p
-            className="text-sm md:text-base text-neutral/80 font-light tracking-wide"
+            className="text-2xl md:text-3xl text-neutral/80 font-light tracking-wide"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 4.5 }}
+            style={{
+              fontFamily: "Space Grotesk"
+            }}
           >
             as a service
           </motion.p>
@@ -199,13 +210,18 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 5 }}
+              style={{
+                fontFamily: "inter, sans-serif"
+              }}
             >
               <p className="text-base md:text-lg text-foreground font-light mb-3 leading-relaxed">
-                We are Opryon, an{' '}
+                We are Opryon Labs, an{' '}
                 <span
                   className="italic font-light"
                   style={{
-                    fontFamily: 'Georgia, serif',
+                    fontFamily: "italic, sans-serif", 
+                    letterSpacing: '0.1em',
+
                   }}
                 >
                   engineering
