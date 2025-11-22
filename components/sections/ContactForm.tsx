@@ -44,7 +44,6 @@ export default function ContactForm() {
       if (sheetsUrl) {
         await fetch(sheetsUrl, {
           method: 'POST',
-          mode: 'no-cors',
           headers: {
             'Content-Type': 'application/json',
           },
