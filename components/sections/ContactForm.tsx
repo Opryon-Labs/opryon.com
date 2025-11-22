@@ -42,12 +42,13 @@ export default function ContactForm() {
       // Send to Google Sheets (if URL is configured)
       const sheetsUrl = process.env.NEXT_PUBLIC_GOOGLE_SHEETS_URL;
       if (sheetsUrl) {
-        await fetch(sheetsUrl, {
+        const origin = typeof window !== 'undefined' ? window.location.origin : '';
+        const params = new URLSearchParams({
+          ...formData,
+          origin,
+        });
+        await fetch(sheetsUrl + '?' + params.toString(), {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(formData),
         });
       }
 
