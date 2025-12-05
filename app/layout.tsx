@@ -18,10 +18,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.opryon.com'),
-  title: 'Opryon - Creating Digital Magic',
+  title: 'Opryon Labs | AI Development & Web Solutions by Opryon',
   description:
-    "Web solutions that don't just look good—they work harder for your business. Custom web development, UI/UX design, and e-commerce solutions.",
-  keywords: ['web development', 'UI/UX design', 'e-commerce solutions', 'custom web design', 'digital agency', 'web design agency'],
+    "Opryon Labs builds AI-powered applications and modern web solutions. We're an engineering team that designs and builds AI solutions, custom web development, and intelligent automation. Based in Bangalore, India.",
+  keywords: ['opryon', 'opryon labs', 'AI development', 'AI solutions', 'AI integration', 'machine learning', 'web development', 'UI/UX design', 'automation', 'custom web development', 'AI powered applications', 'intelligent automation', 'bangalore AI company'],
   authors: [{ name: 'Opryon Labs' }],
   creator: 'Opryon Labs',
   publisher: 'Opryon Labs',
@@ -33,22 +33,22 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://www.opryon.com',
-    title: 'Opryon - Creating Digital Magic',
-    description: "Web solutions that don't just look good—they work harder for your business. Custom web development, UI/UX design, and e-commerce solutions.",
-    siteName: 'Opryon',
+    title: 'Opryon Labs | AI Development & Web Solutions',
+    description: "Opryon Labs builds AI-powered applications and modern web solutions. Engineering team specializing in AI integration, custom web development, and intelligent automation.",
+    siteName: 'Opryon Labs',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 1200,
-        alt: 'Opryon Labs - Digital Solutions',
+        alt: 'Opryon Labs - AI Development & Web Solutions',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Opryon - Creating Digital Magic',
-    description: "Web solutions that don't just look good—they work harder for your business.",
+    title: 'Opryon Labs | AI Development & Web Solutions',
+    description: "Opryon Labs builds AI-powered applications and modern web solutions. Engineering team based in Bangalore, India.",
     images: ['/og-image.png'],
   },
   robots: {
@@ -90,11 +90,19 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "Opryon Labs",
+              "alternateName": "Opryon",
               "url": "https://www.opryon.com",
               "logo": "https://www.opryon.com/logo-square.png",
-              "description": "Web solutions that don't just look good—they work harder for your business. Custom web development, UI/UX design, and e-commerce solutions.",
+              "description": "Opryon Labs is an engineering team that designs and builds AI-powered applications, custom web solutions, and intelligent automation. Based in Bangalore, India.",
               "foundingDate": "2024",
-              "sameAs": []
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Bangalore",
+                "addressCountry": "IN"
+              },
+              "areaServed": "Worldwide",
+              "knowsAbout": ["AI Development", "Machine Learning", "Web Development", "UI/UX Design", "Automation", "Custom Software Development"],
+              "sameAs": ["https://www.linkedin.com/company/opryon-labs"]
             }
           `}
         </Script>
