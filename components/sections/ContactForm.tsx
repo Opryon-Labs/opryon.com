@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { Turnstile } from '@marsidev/react-turnstile';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -15,9 +16,17 @@ export default function ContactForm() {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Check if Turnstile verification passed
+    if (!turnstileToken) {
+      setSubmitStatus('error');
+      return;
+    }
+
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
@@ -61,6 +70,7 @@ export default function ContactForm() {
         phone: '',
         message: '',
       });
+      setTurnstileToken(null);
 
     } catch (error) {
       console.error('Error submitting form:', error);
@@ -165,15 +175,30 @@ export default function ContactForm() {
         />
       </motion.div>
 
+      {/* Turnstile Verification */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4, delay: 0.28 }}
+        className="flex justify-center"
+      >
+        <Turnstile
+          siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY!}
+          onSuccess={(token) => setTurnstileToken(token)}
+          onError={() => setTurnstileToken(null)}
+          onExpire={() => setTurnstileToken(null)}
+        />
+      </motion.div>
+
       {/* Submit Button */}
       <motion.button
         type="submit"
-        disabled={isSubmitting}
+        disabled={isSubmitting || !turnstileToken}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, delay: 0.3 }}
         className={`w-full px-6 py-3 font-medium rounded-lg transition-all duration-300 flex items-center justify-center gap-2 group ${
-          isSubmitting
+          isSubmitting || !turnstileToken
             ? 'bg-neutral/50 text-neutral cursor-not-allowed'
             : 'bg-foreground text-background hover:bg-primary hover:text-background'
         }`}
