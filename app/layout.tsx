@@ -50,6 +50,8 @@ export const metadata: Metadata = {
     title: 'Opryon Labs | AI Development & Web Solutions',
     description: "Opryon Labs builds AI-powered applications and modern web solutions. Engineering team based in Bangalore, India.",
     images: ['/og-image.png'],
+    site: '@opryonlabs',
+    creator: '@opryonlabs',
   },
   robots: {
     index: true,
@@ -102,7 +104,10 @@ export default function RootLayout({
               },
               "areaServed": "Worldwide",
               "knowsAbout": ["AI Development", "Machine Learning", "Web Development", "UI/UX Design", "Automation", "Custom Software Development"],
-              "sameAs": ["https://www.linkedin.com/company/opryon-labs"]
+              "sameAs": [
+                "https://www.linkedin.com/company/opryon-labs",
+                "https://x.com/opryonlabs"
+              ]
             }
           `}
         </Script>
