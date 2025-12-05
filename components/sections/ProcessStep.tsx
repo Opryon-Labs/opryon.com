@@ -14,7 +14,6 @@ interface ProcessStepProps {
   description: string;
   accordionItems: AccordionData[];
   icon: React.ReactNode;
-  isActive?: boolean;
 }
 
 export default function ProcessStep({
@@ -23,7 +22,6 @@ export default function ProcessStep({
   description,
   accordionItems,
   icon,
-  isActive = false,
 }: ProcessStepProps) {
   return (
     <motion.section
@@ -33,10 +31,10 @@ export default function ProcessStep({
       viewport={{ once: true, margin: '-20%' }}
       transition={{ duration: 0.8 }}
     >
-      <div className="max-w-screen-2xl mx-auto px-12 md:px-16 lg:px-20 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+      <div className="max-w-7xl mx-auto px-8 md:px-12 lg:px-16 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-start">
           {/* Left: Step Number & Title */}
-          <div className="lg:col-span-4">
+          <div className="lg:col-span-2">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -48,10 +46,24 @@ export default function ProcessStep({
             </motion.div>
           </div>
 
-          {/* Center: Description & Accordions */}
-          <div className="lg:col-span-5">
+          {/* Right: Description, Accordions & Icon */}
+          <div className="lg:col-span-3 relative">
+            {/* Icon - Floating in top-right */}
+            <motion.div
+              className="absolute -top-8 right-0 lg:right-0"
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            >
+              <div className="w-32 h-32 md:w-40 md:h-40 text-foreground opacity-80">
+                {icon}
+              </div>
+            </motion.div>
+
+            {/* Content */}
             <motion.p
-              className="text-lg md:text-xl lg:text-2xl text-white mb-10 leading-relaxed font-light"
+              className="text-xl md:text-2xl text-white mb-10 leading-relaxed font-normal pr-0 md:pr-48"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -71,19 +83,6 @@ export default function ProcessStep({
               ))}
             </motion.div>
           </div>
-
-          {/* Right: Icon */}
-          <motion.div
-            className="lg:col-span-3 flex justify-center items-center"
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-          >
-            <div className="w-32 h-32 md:w-40 md:h-40 text-foreground opacity-80">
-              {icon}
-            </div>
-          </motion.div>
         </div>
       </div>
     </motion.section>

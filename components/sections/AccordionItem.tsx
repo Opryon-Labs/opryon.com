@@ -17,14 +17,10 @@ export default function AccordionItem({ title, points }: AccordionItemProps) {
         onClick={() => setIsOpen(!isOpen)}
         className="w-full py-6 flex items-center justify-between text-left hover:text-primary transition-colors group"
       >
-        <span className="text-xl md:text-2xl font-light text-white">{title}</span>
-        <motion.div
-          animate={{ rotate: isOpen ? 45 : 0 }}
-          transition={{ duration: 0.3 }}
-          className="text-3xl md:text-4xl font-light text-primary"
-        >
+        <span className="text-xl md:text-2xl font-normal text-white">{title}</span>
+        <div className="text-3xl md:text-4xl font-light text-primary">
           {isOpen ? '×' : '+'}
-        </motion.div>
+        </div>
       </button>
 
       <AnimatePresence initial={false}>
