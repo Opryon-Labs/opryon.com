@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     siteName: 'Opryon Labs',
     images: [
       {
-        url: '/og-image.png',
+        url: '/logo-square.png',
         width: 1200,
         height: 1200,
         alt: 'Opryon Labs - AI Development & Web Solutions',
@@ -46,10 +46,10 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
-    card: 'summary_large_image',
+    card: 'summary',
     title: 'Opryon Labs | AI Development & Web Solutions',
     description: "Opryon Labs builds AI-powered applications and modern web solutions. Engineering team based in Bangalore, India.",
-    images: ['/og-image.png'],
+    images: ['/logo-square.png'],
     site: '@opryonlabs',
     creator: '@opryonlabs',
   },
