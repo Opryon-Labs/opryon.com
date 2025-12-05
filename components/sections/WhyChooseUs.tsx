@@ -187,7 +187,7 @@ export default function WhyChooseUs() {
                 <div className="text-5xl font-bold text-primary mb-2">24/7</div>
                 <h3 className="text-xl font-semibold mb-2">Always Innovating</h3>
                 <p className="text-neutral text-sm">
-                  We stay ahead of trends so you don't have to worry
+                  We stay ahead of trends so you don&apos;t have to worry
                 </p>
               </div>
 
