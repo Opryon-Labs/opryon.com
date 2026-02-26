@@ -71,11 +71,11 @@ export default function Footer() {
                 +91 6396591516
               </a>
               <span className="text-neutral/40">•</span>
-              <a href="#" className="hover:text-primary transition-colors">
+              <a href="/terms" className="hover:text-primary transition-colors">
                 Terms & Conditions
               </a>
               <span className="text-neutral/40">•</span>
-              <a href="#" className="hover:text-primary transition-colors">
+              <a href="/privacy" className="hover:text-primary transition-colors">
                 Privacy Policy
               </a>
             </div>
