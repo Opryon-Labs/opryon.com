@@ -229,7 +229,7 @@ export default function Hero() {
                 team that designs and builds AI solutions and experiences
               </p>
               <p className="text-sm md:text-base text-neutral/70 font-light tracking-wide">
-                Based in Bangalore, India. Tinkering since 2025
+                Based in Roorkee, India. Tinkering since 2025
               </p>
             </motion.div>
           </div>

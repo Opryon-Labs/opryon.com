@@ -18,10 +18,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.opryon.com'),
-  title: 'Opryon Labs | AI Development & Web Solutions by Opryon',
+  title: 'Opryon Labs - AI Development & Web Solutions',
   description:
-    "Opryon Labs builds AI-powered applications and modern web solutions. We're an engineering team that designs and builds AI solutions, custom web development, and intelligent automation. Based in Bangalore, India.",
-  keywords: ['opryon', 'opryon labs', 'AI development', 'AI solutions', 'AI integration', 'machine learning', 'web development', 'UI/UX design', 'automation', 'custom web development', 'AI powered applications', 'intelligent automation', 'bangalore AI company'],
+    "Opryon Labs builds AI-powered applications and modern web solutions. We're an engineering team that designs and builds AI solutions, custom web development, and intelligent automation. Based in Roorkee, India.",
+  keywords: ['opryon', 'opryon labs', 'AI development', 'AI solutions', 'AI integration', 'machine learning', 'web development', 'UI/UX design', 'automation', 'custom web development', 'AI powered applications', 'intelligent automation', 'roorkee AI company', 'uttarakhand tech company'],
   authors: [{ name: 'Opryon Labs' }],
   creator: 'Opryon Labs',
   publisher: 'Opryon Labs',
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary',
     title: 'Opryon Labs | AI Development & Web Solutions',
-    description: "Opryon Labs builds AI-powered applications and modern web solutions. Engineering team based in Bangalore, India.",
+    description: "Opryon Labs builds AI-powered applications and modern web solutions. Engineering team based in Roorkee, India.",
     images: ['/logo-square.png'],
     site: '@opryonlabs',
     creator: '@opryonlabs',
@@ -95,11 +95,12 @@ export default function RootLayout({
               "alternateName": "Opryon",
               "url": "https://www.opryon.com",
               "logo": "https://www.opryon.com/logo-square.png",
-              "description": "Opryon Labs is an engineering team that designs and builds AI-powered applications, custom web solutions, and intelligent automation. Based in Bangalore, India.",
+              "description": "Opryon Labs is an engineering team that designs and builds AI-powered applications, custom web solutions, and intelligent automation. Based in Roorkee, India.",
               "foundingDate": "2024",
               "address": {
                 "@type": "PostalAddress",
-                "addressLocality": "Bangalore",
+                "addressLocality": "Roorkee",
+                "addressRegion": "Uttarakhand",
                 "addressCountry": "IN"
               },
               "areaServed": "Worldwide",

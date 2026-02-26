@@ -195,7 +195,7 @@ export default function PrivacyPolicy() {
               <p><strong className="text-foreground">Opryon Labs</strong></p>
               <p>Email: <a href="mailto:info@opryon.com" className="text-primary hover:text-primary-dark">info@opryon.com</a></p>
               <p>Phone: <a href="tel:+916396591516" className="text-primary hover:text-primary-dark">+91 6396591516</a></p>
-              <p>Location: Bangalore, India</p>
+              <p>Location: Roorkee, Uttarakhand, India</p>
             </div>
           </section>
         </div>

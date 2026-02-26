@@ -212,7 +212,7 @@ export default function TermsOfService() {
             <p className="text-neutral leading-relaxed">
               These Terms shall be governed by and construed in accordance with the laws of India, without regard
               to its conflict of law provisions. Any disputes arising from these Terms shall be subject to the
-              exclusive jurisdiction of the courts in Bangalore, India.
+              exclusive jurisdiction of the courts in Roorkee, Uttarakhand, India.
             </p>
           </section>
 
@@ -251,7 +251,7 @@ export default function TermsOfService() {
               <p><strong className="text-foreground">Opryon Labs</strong></p>
               <p>Email: <a href="mailto:info@opryon.com" className="text-primary hover:text-primary-dark">info@opryon.com</a></p>
               <p>Phone: <a href="tel:+916396591516" className="text-primary hover:text-primary-dark">+91 6396591516</a></p>
-              <p>Location: Bangalore, India</p>
+              <p>Location: Roorkee, Uttarakhand, India</p>
             </div>
           </section>
         </div>
