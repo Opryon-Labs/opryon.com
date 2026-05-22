@@ -18,13 +18,36 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.opryon.com'),
-  title: 'Opryon Labs - AI Development & Web Solutions',
+  title: {
+    default: 'Opryon Labs — AI Development & Web Solutions',
+    template: '%s | Opryon Labs',
+  },
   description:
-    "Opryon Labs builds AI-powered applications and modern web solutions. We're an engineering team that designs and builds AI solutions, custom web development, and intelligent automation. Based in Roorkee, India.",
-  keywords: ['opryon', 'opryon labs', 'AI development', 'AI solutions', 'AI integration', 'machine learning', 'web development', 'UI/UX design', 'automation', 'custom web development', 'AI powered applications', 'intelligent automation', 'roorkee AI company', 'uttarakhand tech company'],
-  authors: [{ name: 'Opryon Labs' }],
+    'Opryon Labs is an engineering team building AI-powered apps and web solutions. We ship GymPilot, AstraBill & FuelPulse. Based in Roorkee, India.',
+  keywords: [
+    'opryon labs',
+    'opryon',
+    'AI development India',
+    'AI solutions',
+    'AI integration',
+    'machine learning',
+    'web development',
+    'SaaS development India',
+    'UI/UX design',
+    'automation',
+    'custom web development',
+    'AI powered applications',
+    'intelligent automation',
+    'AI development agency Roorkee',
+    'web development Uttarakhand',
+    'Next.js development',
+  ],
+  authors: [{ name: 'Asmit Tyagi', url: 'https://asmittyagi.com' }],
   creator: 'Opryon Labs',
   publisher: 'Opryon Labs',
+  alternates: {
+    canonical: 'https://www.opryon.com',
+  },
   icons: {
     icon: '/Favicon.ico',
     apple: '/apple-touch-icon.png',
@@ -33,23 +56,25 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://www.opryon.com',
-    title: 'Opryon Labs | AI Development & Web Solutions',
-    description: "Opryon Labs builds AI-powered applications and modern web solutions. Engineering team specializing in AI integration, custom web development, and intelligent automation.",
+    title: 'Opryon Labs — AI Development & Web Solutions',
+    description:
+      'Opryon Labs builds AI-powered apps and modern web solutions. We ship GymPilot, AstraBill & FuelPulse. Engineering team based in Roorkee, India.',
     siteName: 'Opryon Labs',
     images: [
       {
-        url: '/logo-square.png',
+        url: '/og-image.png',
         width: 1200,
-        height: 1200,
-        alt: 'Opryon Labs - AI Development & Web Solutions',
+        height: 630,
+        alt: 'Opryon Labs — AI Development & Web Solutions',
       },
     ],
   },
   twitter: {
-    card: 'summary',
-    title: 'Opryon Labs | AI Development & Web Solutions',
-    description: "Opryon Labs builds AI-powered applications and modern web solutions. Engineering team based in Roorkee, India.",
-    images: ['/logo-square.png'],
+    card: 'summary_large_image',
+    title: 'Opryon Labs — AI Development & Web Solutions',
+    description:
+      'Opryon Labs builds AI-powered apps and web solutions. Based in Roorkee, India.',
+    images: ['/og-image.png'],
     site: '@opryonlabs',
     creator: '@opryonlabs',
   },
@@ -86,28 +111,84 @@ export default function RootLayout({
             gtag('config', 'G-0QH4KTEW1S');
           `}
         </Script>
-        <Script id="structured-data" type="application/ld+json" strategy="afterInteractive">
+        <Script id="structured-data" type="application/ld+json" strategy="beforeInteractive">
           {`
             {
               "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Opryon Labs",
-              "alternateName": "Opryon",
-              "url": "https://www.opryon.com",
-              "logo": "https://www.opryon.com/logo-square.png",
-              "description": "Opryon Labs is an engineering team that designs and builds AI-powered applications, custom web solutions, and intelligent automation. Based in Roorkee, India.",
-              "foundingDate": "2024",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Roorkee",
-                "addressRegion": "Uttarakhand",
-                "addressCountry": "IN"
-              },
-              "areaServed": "Worldwide",
-              "knowsAbout": ["AI Development", "Machine Learning", "Web Development", "UI/UX Design", "Automation", "Custom Software Development"],
-              "sameAs": [
-                "https://www.linkedin.com/company/opryon-labs",
-                "https://x.com/opryonlabs"
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  "@id": "https://www.opryon.com/#organization",
+                  "name": "Opryon Labs",
+                  "alternateName": "Opryon",
+                  "url": "https://www.opryon.com",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://www.opryon.com/logo-square.png",
+                    "width": 512,
+                    "height": 512
+                  },
+                  "description": "Opryon Labs is an engineering team that designs and builds AI-powered applications, custom web solutions, and intelligent automation. Based in Roorkee, India.",
+                  "foundingDate": "2024",
+                  "founder": {
+                    "@type": "Person",
+                    "name": "Asmit Tyagi",
+                    "url": "https://asmittyagi.com"
+                  },
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Roorkee",
+                    "addressRegion": "Uttarakhand",
+                    "addressCountry": "IN"
+                  },
+                  "contactPoint": {
+                    "@type": "ContactPoint",
+                    "email": "info@opryon.com",
+                    "contactType": "customer service"
+                  },
+                  "areaServed": "Worldwide",
+                  "knowsAbout": ["AI Development", "Machine Learning", "Web Development", "UI/UX Design", "Automation", "Custom Software Development"],
+                  "sameAs": [
+                    "https://www.linkedin.com/company/opryon-labs",
+                    "https://x.com/opryonlabs",
+                    "https://github.com/Opryon-Labs"
+                  ]
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://www.opryon.com/#website",
+                  "url": "https://www.opryon.com/",
+                  "name": "Opryon Labs",
+                  "description": "Opryon Labs — AI Development & Web Solutions",
+                  "publisher": { "@id": "https://www.opryon.com/#organization" }
+                },
+                {
+                  "@type": "ProfessionalService",
+                  "@id": "https://www.opryon.com/#service",
+                  "name": "Opryon Labs",
+                  "url": "https://www.opryon.com",
+                  "image": "https://www.opryon.com/og-image.png",
+                  "description": "AI-powered application development, custom web solutions, conversational AI, and intelligent automation services.",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Roorkee",
+                    "addressRegion": "Uttarakhand",
+                    "addressCountry": "IN"
+                  },
+                  "areaServed": "Worldwide",
+                  "hasOfferCatalog": {
+                    "@type": "OfferCatalog",
+                    "name": "Services",
+                    "itemListElement": [
+                      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI-Powered Application Development" } },
+                      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom Web Development" } },
+                      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Conversational AI & Chatbots" } },
+                      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "UI/UX Design" } },
+                      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Automation Solutions" } },
+                      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Integration" } }
+                    ]
+                  }
+                }
               ]
             }
           `}

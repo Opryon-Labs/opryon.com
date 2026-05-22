@@ -2,20 +2,23 @@
 
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { useState, useEffect } from 'react';
 
 const navigationLinks = [
-  { name: 'Home', id: 'hero' },
-  { name: 'What We Do', id: 'services' },
-  { name: 'How We Do It', id: 'process' },
-  { name: 'Why Choose Us', id: 'why-choose-us' },
-  { name: 'Our Work', id: 'work' },
-  { name: 'Contact', id: 'contact' },
+  { name: 'Home', id: 'hero', href: null },
+  { name: 'Services', id: 'services', href: '/services' },
+  { name: 'Our Work', id: 'work', href: '/work' },
+  { name: 'About', id: null, href: '/about' },
+  { name: 'Blog', id: null, href: '/blog' },
+  { name: 'Contact', id: 'contact', href: null },
 ];
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { scrollY } = useScroll();
+  const router = useRouter();
 
   // Prevent body scroll when menu is open
   useEffect(() => {
@@ -48,6 +51,21 @@ export default function Header() {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
       setIsMenuOpen(false);
+    }
+  };
+
+  const handleNavClick = (link: { name: string; id: string | null; href: string | null }) => {
+    setIsMenuOpen(false);
+    if (link.href) {
+      router.push(link.href);
+    } else if (link.id) {
+      // Try to scroll on current page, or navigate home first
+      const element = document.getElementById(link.id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        router.push(`/#${link.id}`);
+      }
     }
   };
 
@@ -138,8 +156,8 @@ export default function Header() {
                 const isEven = index % 2 === 1; // Even position items go right
                 return (
                   <motion.button
-                    key={link.id}
-                    onClick={() => scrollToSection(link.id)}
+                    key={link.name}
+                    onClick={() => handleNavClick(link)}
                     className={`text-xl md:text-3xl lg:text-4xl font-light hover:font-semibold relative group w-full py-4 transition-all duration-300 cursor-pointer ${
                       isEven ? 'text-right' : 'text-left'
                     }`}
