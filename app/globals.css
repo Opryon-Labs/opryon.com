@@ -24,6 +24,18 @@
   /* Background variations */
   --bg-elevated: #141414; /* Slightly lighter than background */
   --bg-card: #1a1a1a; /* Card backgrounds */
+
+  /* ── v2 palette ────────────────────────────────────────────────
+     Editorial, warm, restrained. One accent, used to mean something.
+     Replaces the neon cyan/lime scheme on the homepage.            */
+  --ink: #0a0a0b; /* Warm near-black page ground */
+  --ink-raised: #121214; /* Cards / raised surfaces */
+  --ink-line: #232327; /* Hairlines and borders */
+  --bone: #edebe7; /* Warm off-white — primary text */
+  --bone-dim: #9b9892; /* Secondary text */
+  --bone-faint: #64615d; /* Labels, meta, disabled */
+  --clay: #d97757; /* The single accent */
+  --clay-dim: #a9553a;
 }
 
 @theme inline {
@@ -38,9 +50,20 @@
   --color-bg-elevated: var(--bg-elevated);
   --color-bg-card: var(--bg-card);
 
+  /* v2 palette */
+  --color-ink: var(--ink);
+  --color-ink-raised: var(--ink-raised);
+  --color-ink-line: var(--ink-line);
+  --color-bone: var(--bone);
+  --color-bone-dim: var(--bone-dim);
+  --color-bone-faint: var(--bone-faint);
+  --color-clay: var(--clay);
+  --color-clay-dim: var(--clay-dim);
+
   /* Fonts */
   --font-sans: var(--font-inter);
   --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-instrument-serif);
 
   /* Custom animations */
   --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
@@ -102,5 +125,49 @@ body {
   }
   50% {
     opacity: 1;
+  }
+}
+
+/* ── v2 utilities ─────────────────────────────────────────────── */
+
+/* Page-level film grain. Replaces the blurred neon glows — adds depth
+   without shouting. Pointer-events none, sits above everything. */
+.grain::after {
+  content: '';
+  position: fixed;
+  inset: -50%;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Hairline rule that fades at both ends */
+.rule-fade {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--ink-line) 15%,
+    var(--ink-line) 85%,
+    transparent
+  );
+}
+
+::selection {
+  background: var(--clay);
+  color: var(--ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

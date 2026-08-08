@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter, Geist_Mono } from 'next/font/google';
+import { Inter, Geist_Mono, Instrument_Serif } from 'next/font/google';
 import './globals.css';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
@@ -16,14 +16,23 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 });
 
+// Display face for headlines. The contrast between a real serif and a
+// neutral grotesk is what creates the premium read — not gradients.
+const instrumentSerif = Instrument_Serif({
+  variable: '--font-instrument-serif',
+  subsets: ['latin'],
+  weight: '400',
+  style: ['normal', 'italic'],
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.opryon.com'),
   title: {
-    default: 'Opryon Labs — AI Development & Web Solutions',
+    default: 'Opryon Labs — We build software, then we run it',
     template: '%s | Opryon Labs',
   },
   description:
-    'Opryon Labs is an engineering team building AI-powered apps and web solutions. We ship GymPilot, AstraBill & FuelPulse. Based in Roorkee, India.',
+    'A small engineering team in Roorkee, India. We built and still run three products of our own — GymPilot, AstraBill and FuelPulse — plus client work in fleet compliance and document automation.',
   keywords: [
     'opryon labs',
     'opryon',
@@ -56,9 +65,9 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://www.opryon.com',
-    title: 'Opryon Labs — AI Development & Web Solutions',
+    title: 'Opryon Labs — We build software, then we run it',
     description:
-      'Opryon Labs builds AI-powered apps and modern web solutions. We ship GymPilot, AstraBill & FuelPulse. Engineering team based in Roorkee, India.',
+      'A small engineering team in Roorkee, India. Three products of our own in production — GymPilot, AstraBill and FuelPulse — and we still maintain every one.',
     siteName: 'Opryon Labs',
     images: [
       {
@@ -98,7 +107,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${geistMono.variable} antialiased`}>
+      <body
+        className={`${inter.variable} ${geistMono.variable} ${instrumentSerif.variable} antialiased`}
+      >
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-0QH4KTEW1S"
           strategy="afterInteractive"
