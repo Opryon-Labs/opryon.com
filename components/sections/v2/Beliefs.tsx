@@ -20,12 +20,14 @@ export default function Beliefs() {
         <div className="mt-14 max-w-5xl">
           {beliefs.map((line, i) => (
             <Reveal key={line} delay={i * 0.08}>
-              <p className="font-display text-[clamp(1.75rem,4vw,3.25rem)] leading-[1.15] tracking-[-0.015em] text-bone py-5 border-b border-ink-line">
-                <span className="font-mono text-[11px] align-super text-bone-faint mr-4">
+              <div className="flex items-start gap-4 sm:gap-5 py-5 border-b border-ink-line">
+                <span className="font-mono text-[11px] text-bone-faint pt-[0.55em] shrink-0">
                   0{i + 1}
                 </span>
-                {line}
-              </p>
+                <p className="font-display text-[clamp(1.75rem,4vw,3.25rem)] leading-[1.15] tracking-[-0.015em] text-bone">
+                  {line}
+                </p>
+              </div>
             </Reveal>
           ))}
         </div>

@@ -1,6 +1,5 @@
 'use client';
 
-import { Container } from '@/components/ui';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -8,9 +7,9 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-bg-elevated border-t border-neutral-dark/20 py-12 md:py-16">
-      <Container>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-12 mb-10">
+    <footer className="bg-ink border-t border-ink-line py-16 md:py-20">
+      <div className="w-full max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-12 mb-12">
           {/* Brand */}
           <div className="md:col-span-1">
             <Image
@@ -20,25 +19,27 @@ export default function Footer() {
               height={26}
               className="h-5 md:h-6 w-auto mb-4"
             />
-            <p className="text-neutral/60 text-sm leading-relaxed">
-              Engineering team building AI-powered apps and web solutions. Based in Roorkee, India.
+            <p className="text-bone-dim text-sm leading-relaxed max-w-[26ch]">
+              A small engineering team in Roorkee, India. We build software, then we run it.
             </p>
           </div>
 
           {/* Pages */}
           <div>
-            <p className="text-xs uppercase tracking-wider text-neutral/40 font-mono mb-4">Company</p>
+            <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-bone-faint mb-4">
+              Company
+            </p>
             <ul className="space-y-2">
               {[
-                { label: 'About', href: '/about' },
+                { label: 'Work', href: '/work' },
                 { label: 'Services', href: '/services' },
-                { label: 'Our Work', href: '/work' },
+                { label: 'About', href: '/about' },
                 { label: 'Blog', href: '/blog' },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-neutral hover:text-primary transition-colors"
+                    className="text-sm text-bone-dim hover:text-clay transition-colors duration-300"
                   >
                     {link.label}
                   </Link>
@@ -49,7 +50,7 @@ export default function Footer() {
 
           {/* Products */}
           <div>
-            <p className="text-xs uppercase tracking-wider text-neutral/40 font-mono mb-4">
+            <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-bone-faint mb-4">
               Products
             </p>
             <ul className="space-y-2">
@@ -63,10 +64,10 @@ export default function Footer() {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm text-neutral hover:text-primary transition-colors inline-flex items-center gap-1"
+                    className="text-sm text-bone-dim hover:text-clay transition-colors duration-300 inline-flex items-center gap-1"
                   >
                     {link.label}
-                    <span className="text-neutral/30 text-xs">↗</span>
+                    <span className="text-bone-faint text-xs">↗</span>
                   </Link>
                 </li>
               ))}
@@ -75,14 +76,14 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <p className="text-xs uppercase tracking-wider text-neutral/40 font-mono mb-4">
+            <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-bone-faint mb-4">
               Contact
             </p>
             <ul className="space-y-2">
               <li>
                 <Link
                   href="mailto:info@opryon.com"
-                  className="text-sm text-neutral hover:text-primary transition-colors"
+                  className="text-sm text-bone-dim hover:text-clay transition-colors duration-300"
                 >
                   info@opryon.com
                 </Link>
@@ -90,18 +91,18 @@ export default function Footer() {
               <li>
                 <Link
                   href="tel:+916396591516"
-                  className="text-sm text-neutral hover:text-primary transition-colors"
+                  className="text-sm text-bone-dim hover:text-clay transition-colors duration-300"
                 >
                   +91 6396591516
                 </Link>
               </li>
-              <li className="pt-2 flex gap-3">
+              <li className="pt-2 flex gap-4">
                 <Link
                   href="https://x.com/opryonlabs"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Opryon Labs on X (Twitter)"
-                  className="text-neutral hover:text-primary transition-colors"
+                  className="text-bone-dim hover:text-clay transition-colors duration-300"
                 >
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
@@ -112,7 +113,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Opryon Labs on GitHub"
-                  className="text-neutral hover:text-primary transition-colors"
+                  className="text-bone-dim hover:text-clay transition-colors duration-300"
                 >
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                     <path
@@ -127,7 +128,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Opryon Labs on LinkedIn"
-                  className="text-neutral hover:text-primary transition-colors"
+                  className="text-bone-dim hover:text-clay transition-colors duration-300"
                 >
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
@@ -139,19 +140,19 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-neutral-dark/20 pt-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
-          <p className="text-neutral/40 text-xs">© {currentYear} Opryon Labs. All rights reserved.</p>
-          <div className="flex flex-wrap gap-4 text-xs text-neutral/40">
-            <Link href="/terms" className="hover:text-primary transition-colors">
+        <div className="border-t border-ink-line pt-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
+          <p className="text-bone-faint text-xs">© {currentYear} Opryon Labs. All rights reserved.</p>
+          <div className="flex flex-wrap gap-4 text-xs text-bone-faint">
+            <Link href="/terms" className="hover:text-clay transition-colors duration-300">
               Terms
             </Link>
-            <Link href="/privacy" className="hover:text-primary transition-colors">
+            <Link href="/privacy" className="hover:text-clay transition-colors duration-300">
               Privacy
             </Link>
             <span>Built with ✦ by Opryon Labs</span>
           </div>
         </div>
-      </Container>
+      </div>
     </footer>
   );
 }
