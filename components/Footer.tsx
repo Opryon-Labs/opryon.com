@@ -58,6 +58,7 @@ export default function Footer() {
                 { label: 'GymPilot', href: 'https://thegympilot.com' },
                 { label: 'AstraBill', href: 'https://astrabill.com' },
                 { label: 'FuelPulse', href: 'https://fuelpulse.in' },
+                { label: 'Ekaya Fresh Food Hub', href: 'https://ekayafoods.com' },
               ].map((link) => (
                 <li key={link.href}>
                   <Link

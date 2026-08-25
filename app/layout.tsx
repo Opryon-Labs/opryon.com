@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     template: '%s | Opryon Labs',
   },
   description:
-    'A small engineering team in Roorkee, India. We built and still run three products of our own — GymPilot, AstraBill and FuelPulse — plus client work in fleet compliance and document automation.',
+    'A small engineering team in Roorkee, India. We built and still run four products of our own — GymPilot, AstraBill, FuelPulse and Ekaya Fresh Food Hub — plus client work in fleet compliance and document automation.',
   keywords: [
     'opryon labs',
     'opryon',
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     url: 'https://www.opryon.com',
     title: 'Opryon Labs — We build software, then we run it',
     description:
-      'A small engineering team in Roorkee, India. Three products of our own in production — GymPilot, AstraBill and FuelPulse — and we still maintain every one.',
+      'A small engineering team in Roorkee, India. Four products of our own in production — GymPilot, AstraBill, FuelPulse and Ekaya Fresh Food Hub — and we still maintain every one.',
     siteName: 'Opryon Labs',
     images: [
       {

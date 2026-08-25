@@ -16,6 +16,7 @@ Founded: 2024
 - [GymPilot](https://thegympilot.com): Gym management software with WhatsApp automation for Indian fitness businesses. Handles member tracking, attendance, fee collection (UPI + cash), and automated renewal reminders.
 - [AstraBill](https://astrabill.com): GST-compliant billing and expense management SaaS for Indian small and mid-size businesses. Automates invoicing, payment follow-up, and expense reporting.
 - [FuelPulse](https://fuelpulse.in): AI-powered nutrition and habit tracker built for Indian food. Users log meals in plain text and the AI estimates calories, protein, and macros for Indian dishes like dal, biryani, and sabzi.
+- [Ekaya Fresh Food Hub](https://ekayafoods.com): Online ordering for a pure-veg home-style kitchen in Meerut. Menu browsing, checkout with server-side re-pricing, order tracking, and a mobile-first admin for the owner.
 
 ## Services
 - [AI-Powered Application Development](/services): We integrate AI and LLM APIs (OpenAI, Google Gemini, Anthropic) into custom applications — recommendation engines, chatbots, semantic search, automation pipelines.
@@ -26,7 +27,7 @@ Founded: 2024
 - [AI Integration](/services): Adding AI capabilities to existing systems without full rebuilds. LLM API integration, embedding and vector search, prompt engineering.
 
 ## Case Studies & Work
-- [Our Work](/work): Full case studies for GymPilot, AstraBill, and FuelPulse including problem, solution, and outcomes.
+- [Our Work](/work): Full case studies for GymPilot, AstraBill, FuelPulse, and Ekaya Fresh Food Hub including problem, solution, and outcomes.
 - [Blog](/blog): Engineering notes, case studies, and product stories from the Opryon Labs team.
 
 ## Blog Posts

@@ -36,6 +36,16 @@ const projects = [
     accent: '#a855f7',
   },
   {
+    title: 'Ekaya Fresh Food Hub',
+    category: 'Web App',
+    description:
+      'Online ordering for a pure-veg home kitchen in Meerut. Menu, checkout with server-side re-pricing, order tracking, and a mobile-first admin the owner runs on her phone.',
+    tags: ['Next.js', 'TypeScript', 'PostgreSQL', 'Drizzle'],
+    href: 'https://ekayafoods.com',
+    label: 'ekayafoods.com',
+    accent: '#f5c518',
+  },
+  {
     title: 'Asmit Tyagi — Portfolio',
     category: 'Web Development',
     description:

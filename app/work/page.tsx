@@ -7,14 +7,14 @@ import Footer from '@/components/Footer';
 export const metadata: Metadata = {
   title: 'Our Work',
   description:
-    'Products built and run by Opryon Labs — GymPilot, AstraBill, FuelPulse — plus client work under NDA in fleet compliance and document automation.',
+    'Products built and run by Opryon Labs — GymPilot, AstraBill, FuelPulse, Ekaya Fresh Food Hub — plus client work under NDA in fleet compliance and document automation.',
   alternates: {
     canonical: 'https://www.opryon.com/work',
   },
   openGraph: {
     title: 'Our Work | Opryon Labs',
     description:
-      'Products built and run by Opryon Labs — GymPilot, AstraBill, FuelPulse, and client work under NDA.',
+      'Products built and run by Opryon Labs — GymPilot, AstraBill, FuelPulse, Ekaya Fresh Food Hub, and client work under NDA.',
     url: 'https://www.opryon.com/work',
   },
 };

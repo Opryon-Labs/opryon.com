@@ -76,6 +76,20 @@ export const ownProducts: Project[] = [
     href: 'https://fuelpulse.in',
     hrefLabel: 'fuelpulse.in',
   },
+  {
+    name: 'Ekaya Fresh Food Hub',
+    kind: 'Web — live',
+    summary:
+      'Ordering and operations for a pure-veg home kitchen in Meerut. Menu, checkout, order tracking, and a phone-first admin the owner runs herself.',
+    hardPart: {
+      label: 'The hard part',
+      detail:
+        "A cart lives in the customer's browser, so the price in it is a suggestion, not a fact. Every order is re-priced from the database at checkout, and when something has moved — a price, a sold-out dish, a rejected coupon — the customer has to confirm the exact new total before it goes through. A stale page cannot authorise a figure it never displayed.",
+    },
+    stack: ['Next.js', 'TypeScript', 'PostgreSQL', 'Drizzle'],
+    href: 'https://ekayafoods.com',
+    hrefLabel: 'ekayafoods.com',
+  },
 ];
 
 export const clientWork: Project[] = [

@@ -51,6 +51,12 @@ AI-powered nutrition tracker designed for Indian food. Users describe meals in p
 - Target market: Indian fitness enthusiasts
 - Key feature: Natural language Indian food recognition
 
+### Ekaya Fresh Food Hub (https://ekayafoods.com)
+Online ordering for a pure-veg, home-style takeaway kitchen in Meerut, Uttar Pradesh. Customers browse the menu, order for pickup or delivery, and track the order; the owner runs the menu, orders, revenue and settings from a phone-first admin.
+- Stack: Next.js 16, TypeScript, PostgreSQL, Drizzle ORM, Vercel
+- Target market: A single independent kitchen and its local customers in Meerut
+- Key feature: Every order is re-priced server-side at checkout, so a stale cart can never fix a price
+
 ---
 
 ## Services Offered by Opryon Labs
@@ -89,7 +95,7 @@ ${blogContent}
 - Headquarters: Roorkee, Uttarakhand, India
 - Founder: Asmit Tyagi
 - Industry: Software development, AI development, SaaS
-- Products: GymPilot, AstraBill, FuelPulse
+- Products: GymPilot, AstraBill, FuelPulse, Ekaya Fresh Food Hub
 - Primary services: AI development, web development, automation, chatbots
 - Geographic focus: India (primary), international (secondary)
 - Contact: info@opryon.com

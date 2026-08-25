@@ -6,7 +6,7 @@ import Footer from '@/components/Footer';
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'Opryon Labs is an engineering team based in Roorkee, India. Founded by Asmit Tyagi in 2024, we build AI-powered applications and SaaS products — GymPilot, AstraBill, and FuelPulse.',
+    'Opryon Labs is an engineering team based in Roorkee, India. Founded by Asmit Tyagi in 2024, we build AI-powered applications and SaaS products — GymPilot, AstraBill, FuelPulse, and Ekaya Fresh Food Hub.',
   alternates: {
     canonical: 'https://www.opryon.com/about',
   },
@@ -33,6 +33,11 @@ const products = [
     name: 'FuelPulse',
     description: 'AI nutrition tracker that understands Indian food',
     url: 'https://fuelpulse.in',
+  },
+  {
+    name: 'Ekaya Fresh Food Hub',
+    description: 'Online ordering for a pure-veg home kitchen in Meerut',
+    url: 'https://ekayafoods.com',
   },
 ];
 
@@ -103,8 +108,9 @@ export default function AboutPage() {
             <p>
               We started building products that fill those gaps. GymPilot for gym owners.
               AstraBill for small business billing. FuelPulse for fitness tracking with Indian
-              food. Each one designed from scratch for the Indian context, not ported from a
-              Western template.
+              food. Ekaya Fresh Food Hub for a home kitchen that needed to take orders online.
+              Each one designed from scratch for the Indian context, not ported from a Western
+              template.
             </p>
             <p>
               We also work with a small number of clients each quarter — startups and businesses
